@@ -25,7 +25,7 @@ bool testReadingSize() {
 
 bool testReadingMeasurement() {
   std::cout << "testReadingMeasurement...";
-  Data datA("testA");
+  Data datA("testA";)
   return testEqual("measurement", 10., datA.measurement(0));
 }
 
@@ -68,12 +68,33 @@ int main() {
   cout << "******************************************************" << endl;
   // create an object which holds data of experiment A
   Data datA("exp_A");
+  Data datB("exp_B");
+  Data datC("exp_C");
+  Data datD("exp_D");
+
+  std :: vector < Data > Data;
+  Datas.push_back(datA);
+  Datas.push_back(datB);
+  Datas.push_back(datC);
+  Datas.push_back(datD);
 
   // here is the data from experiment A
   cout << "bin 27: from " << datA.binLow(27) << " to " << datA.binHigh(27)
        << endl;
   cout << "measurement of experiment A in bin 27: " << datA.measurement(27)
        << endl;
+  cout << "measurement of experiment B in bin 27: " << datB.measurement(27)
+       << endl;
+  cout << "measurement of experiment C in bin 27: " << datC.measurement(27)
+       << endl;
+  cout << "measurement of experiment D in bin 27: " << datD.measurement(27)
+       << endl;
+for (int i = 0; i < 4; ++i) {
+    cout << "measurement of experiment " << i << " in bin 27: " << Datas[i].measurement(27)
+       << endl;
+  }
+  cout << "Hallo!" << endl;
+
 
   return 0;
 }
