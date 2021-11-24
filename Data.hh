@@ -14,7 +14,10 @@ class Data {
   double binLow(int i) const { return m_bins[i]; }
   double binHigh(int i) const { return m_bins[i+1] ; }
   double error(int i) const { return m_errors[i]; }
-
+  
+  // 1d
+  int checkCompatibility ( const Data & in , int n );
+  
  private:
   Data() {}  // disallow empty data set
   void assertSizes();
